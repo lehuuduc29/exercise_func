@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+
+<body>
+    <div>
+        <button type="button" onclick="Sum()">Bai 1</button>
+    </div>
+    <div>
+        <button type="button" onclick="Search()">Bai 2</button>
+    </div>
+    <div>
+        <button type="button" onclick="Square()">Bai 3</button>
+    </div>
+    <div>
+        <button type="button" onclick="Cricle()">Bai 4</button>
+    </div>
+    <div>
+        <button type="button" onclick="Factorial()">Bai 5</button>
+    </div>
+    <div>
+        <button type="button" onclick="Check()">Bai 6</button>
+    </div>
+    <div>
+        <button type="button" onclick="checkMin_int()">Bai 7</button>
+    </div>
+    <div>
+        <button type="button" onclick="Check_Positiveintegers()">Bai 8</button>
+    </div>
+    <div>
+        <button type="button" onclick="reverse()">Bai 9</button>
+    </div>
+    <div>
+        <button type="button" onclick="Count()">Bai 10</button>
+    </div>
+</body>
+<script>
+    // bai 1
+
+    function Sum(a, b) {
+        if (a > b) {
+            alert(a + ">" + b)
+        } else {
+            return a + b
+        }
+    }
+
+    //  bai 2
+
+    function Search() {
+        let key_searh = prompt('nhap vao ten cua mot ngoi sao: ')
+        let Arr = ["Polaris", "Aldebaran", "Deneb", "Vega", "Altair", "Dubhe", "Regulus"]
+        let Brr = ["Ursa Minor", "Tarurus", "Cygnus", "Lyra", "Aquila", "Ursa Major", "Leo"]
+        for (let i = 0; i < Arr.length; i++) {
+            if (key_searh === Arr[i]) {
+                console.log(Arr.indexOf(Arr[i]))
+                console.log(typeof key_searh)
+                console.log(Brr[Arr.indexOf(Arr[i])])
+            } else {
+                alert("Error: khong ton tai. " + key_searh)
+            }
+        }
+    }
+
+    // bai 3
+
+    function Square() {
+        let number = parseFloat(prompt('nhap vao mot so: '))
+        let square = number * number
+        console.log(square)
+    }
+
+
+    // bai 4
+
+    function Circle() {
+        let a = parseFloat(prompt('nhap vao ban kinh duong tron: '))
+        let S = r * r * 3.14
+        let C = r * 2 * 3.14
+        console.log(S, C)
+    }
+
+    // bai 5
+
+    function Factorial() {
+        let n = parseInt(prompt('nhap vao mot so: '))
+        let total = 1
+        for (let i = 1; i <= n; i++) {
+            total = total * i
+            console.log(total)
+        }
+    }
+
+    // bai 6
+
+
+    function Check() {
+        let a = parseFloat(prompt('nhap vao mot so: '))
+        if (Number.isInteger(a)) {
+            return console.log(Number.isInteger(a))
+        } else {
+            return console.log(Number.isInteger(a))
+        }
+    }
+
+
+    // bai 7
+
+    function checkMin_int() {
+        let a = 12
+        let b = 2
+        let c = 60
+        let min = a
+        if (min > b) {
+            if (b > c) {
+                min = c
+                console.log(min)
+            } else {
+                min = b
+                console.log(min)
+            }
+        } else if (min > c) {
+            min = c
+            console.log(min)
+        } else {
+            console.log(min)
+        }
+    }
+
+
+    // bai 8
+
+    function Check_Positiveintegers() {
+        let a = parseFloat(prompt('nhap vao mot so: '))
+        if (a > 0) {
+            return console.log(true)
+        } else {
+            return console.log(false)
+        }
+    }
+
+
+    // bai 9
+
+    function reverse() {
+        let Arr = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+        Arr.reverse()
+        console.log(Arr)
+    }
+
+    // bai 10
+
+    function Count() {
+        let a = prompt('nhap vao mot ky tu: ')
+        let Arr = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j"]
+        let count = 0
+        for (let i = 0; i < Arr.length; i++) {
+            if (a == Arr[i]) {
+                count += 1
+                console.log(Arr.indexOf(Arr[i]))
+            } else {
+                console.log(-1)
+            }
+        }
+        console.log(count)
+    }
+</script>
+
+</html>
